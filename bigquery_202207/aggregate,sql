@@ -1,0 +1,9 @@
+SELECT
+  host, count(*) as count
+FROM
+  `endless_pancake:digdag_202207`
+GROUP BY
+  1
+ORDER BY
+  2 DESC
+LIMIT 100

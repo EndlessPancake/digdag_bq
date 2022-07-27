@@ -1,0 +1,7 @@
+_export:
+  bq:
+    dataset: digdag_202207
+
++export:
+  bq_extract>: digdag_202207
+  destination: gs://digdag_bucket202207/accesslog_202207.csv

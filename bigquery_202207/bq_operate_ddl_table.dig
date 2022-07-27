@@ -1,0 +1,15 @@
+_export:
+  bq:
+    dataset: endless_pancake:digdag_202207
+
++prepare:
+  bq_ddl>:
+  create_tables:
+    - id: accesslog_202207
+      schema:
+        fields:
+          - {name: host, type: INTEGER}
+          - {name: time, type: DATETIME}
+          - {name: method, type: STRING}
+          - {name: code, type: INTEGER}
+          - {name: size, type: INTEGER}

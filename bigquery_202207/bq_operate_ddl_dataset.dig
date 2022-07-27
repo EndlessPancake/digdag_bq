@@ -1,0 +1,5 @@
++prepare:
+  bq_ddl>:
+  create_datasets:
+    - id: digdag_202207
+      location: asia-northeast1

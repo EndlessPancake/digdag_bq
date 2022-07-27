@@ -1,0 +1,20 @@
+_export:
+  bq:
+    dataset: digdag_test
+
++load:
+  bq_load>: gs://digdag_bucket202207/sample_log.jsonl
+  destination_table: digdah_202207
+  source_format: NEWLINE_DELIMITED_JSON
+  schema:
+    fields:
+      - name: "host"
+        type: "INTEGER"
+      - name: "time"
+        type: "DATETIME"
+      - name: "method"
+        type: "STRING"
+      - name: "code"
+        type: "INTEGER"
+      - name: "size"
+        type: "INTEGER"

@@ -1,0 +1,10 @@
+_export:
+  bq:
+    dataset: endless_pancake:digdag_202207
+
++step1:
+  bq>: queries/aggregate.sql
+  destination_table: access_log_202207
+
++output:
+  echo>: 'job id : ${bq.last_job_id}'
